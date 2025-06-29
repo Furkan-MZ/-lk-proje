@@ -508,6 +508,12 @@ width: fit-content;
 }
 
 
+.Müşteri-Tab{
+
+  max-height: 300px;
+
+
+}
 
 }
 
@@ -1340,37 +1346,35 @@ min-height: 490px;
 
     <aside class="show-on-mobile  mobile-customer-container">
         
-    
-
-
-<div class="tab-content Müşteri-Tab" id="pills-tabContent">
-
-  <div class="tab-pane fade show active" id="pills-Müşteri1" role="tabpanel" aria-labelledby="pills-Müşteri1-tab">...</div>
-  <div class="tab-pane fade" id="pills-Müşteri2" role="tabpanel" aria-labelledby="pills-Müşteri2">...</div>
-  <div class="tab-pane fade" id="pills-Müşteri3" role="tabpanel" aria-labelledby="pills-Müşteri3-tab">...</div>
+    <div class="card">
+  <div class="card-header bg-warning">
+   @KullanıcıAdı
+  </div>
+  <div class="card-body" style="background-color: #f0f0f0;" >
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error at cupiditate vero nisi cumque repellendus, fuga ipsum numquam similique doloremque itaque tempore voluptatem omnis dolore, enim quo eligendi hic.</p>
+      <footer class="blockquote-footer">Ürün  <cite title="Source Title">Kampanya</cite> ile alındı</footer>
+    </blockquote>
+  </div>
 </div>
 
+<div style="height: 15px;"></div>
 
-<div class="Müşteri-buton d-flex justify-content-center gap-2 ">  
-
-<div class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+<div class="card">
+  <div class="card-header bg-warning">
+   @KullanıcıAdı
+  </div>
+  <div class="card-body" style="background-color: #f0f0f0;">
+    <blockquote class="blockquote mb-0">
+      <p>Müşteri Örnek Yorum</p>
   
-    <button class=" nav-custom-link active" id="pills-Müşteri1-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri1" type="button" role="tab" aria-controls="pills-Müşteri1" aria-selected="true"></button>
-  
-
-    <button class=" nav-custom-link" id="pills-Müşteri2-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri2" type="button" role="tab" aria-controls="pills-Müşteri2" aria-selected="false"></button>
-  
-
-
-    <button class=" nav-custom-link" id="pills-Müşteri3-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri3" type="button" role="tab" aria-controls="pills-Müşteri3" aria-selected="false"></button>
-  
+    </blockquote>
+  </div>
 </div>
 
-</div>
 
 
     </aside>
-
 
 
 
@@ -1389,10 +1393,11 @@ min-height: 490px;
 
 
 <div class="row">
-   <div style="height: 20px;"></div>
- 
+   <div class="hide-on-mobile" style="height: 20px;"></div>
+ <div class="show-on-mobile" style="height: 15px;"></div>
+
    <div class="col-lg-7 col-sm-12  ">
-    <h2 class="text-center">Neden biz?</h2>
+    <h2 class="text-center " style="color: #343a40; font-size: 40px; font-weight: bold;">Neden biz?</h2>
   
     
 <div class="tab-content years-tab-content mx-auto m-2 " id="pills-tabContent">
@@ -1612,53 +1617,47 @@ min-height: 490px;
 
 
 </aside>
-
 <div style="height: 30px;"></div>
 
-
-    <h2 class="text-center">Ödeme Seçeneklerimiz</h2>
-
-
+<h2 class="text-center">Ödeme Seçeneklerimiz</h2>
 
 <div class="container d-flex justify-content-center">         
    <img src="https://omnipaystore.com/wp-content/uploads/2022/05/Visa.png" width="60" height="auto">
-  <img class="MMImage-Origin" src="https://www.pngarts.com/files/3/Mastercard-Logo-PNG-Transparent-Image.png"  width="200px" >
-
+   <img class="MMImage-Origin" src="https://www.pngarts.com/files/3/Mastercard-Logo-PNG-Transparent-Image.png" width="200px">
 </div>
 
-
 <div class="container-fluid text-center">
-    <h2>Anlaşmalı olduğumuz Bankalar ve Taksit seçenekleri</h2>
+    <h2>Anlaşmalı Olduğumuz Bankalar ve Taksit Seçenekleri</h2>
     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Banka Adı</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">X</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">Y</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">Z</th>
-      <td colspan="2">Larry the Bird</td>
-
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+        <thead>
+            <tr>
+                <th scope="col">Banka Adı</th>
+                <th scope="col">Taksit Sayısı</th>
+                <th scope="col">Faiz Oranı (%)</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">X Bankası</th>
+                <td>6</td>
+                <td>1.5</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">Y Bankası</th>
+                <td>12</td>
+                <td>2.0</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">Z Bankası</th>
+                <td>9</td>
+                <td>1.8</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 
