@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<style>
+
+.carousel-item img {
+  width: 100%;
+  height: 600px; /* İstediğiniz yüksekliğe göre ayarlayabilirsiniz */
+  object-fit: cover; /* Resmin boyutunu koruyarak kapsamasını sağlar */
+}
+
+
+
+
+.alert:hover{
+
+  opacity: 0.2;
+
+
+}
+
+.show-on-mobile{
+    
+display: none;
+
+}
+
+@media (max-width:600px){
+
+    .hide-on-mobile{
+
+        display: none;
+
+    }
+ 
+    .çeşit{
+      width: 120px;
+      height: 120px;
+    }
+
+    .show-on-mobile{
+
+display: block;
+
+    }
+
+
+  
+}
+
+
+@media (min-width:1000px){
+
+.show-above-lg{
+
+display: block;
+
+}
+
+}
+
+
+@media (max-width:1000px){
+
+.show-below-lg{
+
+  display: block;
+}
+
+
+}
+
+
+.resimler{
+
+    object-fit: fill;
+
+
+}
+
+
+
+
+
+ 
+.çeşit-tab-content{
+
+ 
+    min-height: 400px;
+     max-height: 500px;
+
+
+}
+
+.çeşit-tab-content img{
+
+    width: 100%;
+   
+    max-height: 300px;
+    object-fit: contain;
+}
+
+
+.Ana-başlık{
+
+  font-size: 70px;
+  font-weight: bold;
+  
+
+
+
+}
+
+
+
+
+   @media(max-width:600px){
+
+
+.çeşit-tab-content{
+
+height: 500px;
+
+
+}
+
+.Ana-başlık{
+
+font-size: 50px; 
+
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+}
+
+
+
+    
+.tab-pane{
+margin: 50px;
+min-height: 500px;
+
+}
+
+     }
+
+.çeşit-buton{
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color:lightslategray ;
+   color: white;
+     opacity: 0.5;
+
+    transition: all 0.3s linear;
+
+}
+
+
+
+.çeşit-buton:hover{
+   opacity: 1;
+    transform: translateY(-3px);
+    outline: 2px solid antiquewhite;
+  
+}
+
+.çeşit-buton.active{
+opacity: 1;
+background-color: blue;
+width: 25px;
+height: 25px;
+
+}
+
+
+
+
+
+.yorum{
+   cursor:pointer;
+  transition: all 0.3s linear;
+}
+
+.yorum:hover{
+  border: 2px solid yellow; 
+  transform: translatey(-3px);
+
+
+
+
+}
+
+
+.ütü-resmi{
+   transition: all 0.3s ease-out;
+   cursor: pointer;
+}
+
+.ütü-resmi:hover{
+
+ rotate: -5deg;
+
+}
+
+.Müşteri-Tab{
+    border-radius: 10%;
+    background-color: beige;
+    border: none;
+    min-height: 350px;
+    margin: 0;
+
+}
+.nav-custom-link {
+    width: 30px; /* Genişliği artırdık */
+    height: 30px; /* Yüksekliği artırdık */
+    border-radius: 50%;
+    background-color: gray;
+    color: white; /* Yazı rengi beyaz */
+    display: flex; /* İçerik merkezde görünmesi için */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.Müşteri-Buton{
+
+    display: flex;
+    justify-content: center;
+    gap: 1;
+}
+
+
+.nav-custom-link:hover{
+     outline: 2px solid white; 
+    transform: translateY(-3px);
+
+
+}
+
+.nav-custom-link.active{
+
+ background-color: blue;
+
+
+}
+
+.years-tab-content{
+
+ max-width: max-content; 
+
+
+
+}
+
+.years-tab-content img{
+
+width: 100%;
+height: 300px;
+object-fit: contain;
+
+}
+
+.years-button{
+   
+   border-radius: 10%;
+  border-color: #6610f2;
+   background-color:crimson;
+  
+  transition: all 0.3s linear;
+
+}
+
+.years-button:hover{
+box-shadow: -3px 3px 3px gray;
+   
+  transform: translateY(-3px);
+
+
+}
+
+
+.gelecek-sol{
+transition: all 0.2s linear;
+cursor: pointer;
+
+}
+
+
+.gelecek-sol:hover{
+
+border: 2px double snow;
+filter: saturate(3) brightness(1.4);
+
+
+}
+
+.gelecek-sağ{
+transition: all 0.2s linear;
+cursor: pointer;
+
+
+}
+
+
+.gelecek-sağ:hover{
+
+border: 2px double snow;
+filter:saturate(3) brightness(1.5);
+
+
+}
+
+
+
+
+
+
+
+.şimdiAl{
+z-index: 1;
+  position: relative;
+  left: 3rem;
+ bottom:120px;
+ transition: all 0.3s linear;
+}
+
+
+
+.şimdi-resim:hover{
+filter:opacity(0.5)
+
+}
+
+.şimdiAl:hover{
+  cursor: pointer;
+color: #6610f2;
+
+
+
+}
+
+
+.accordion-item{
+    border: none;
+}
+
+
+
+
+
+
+
+.bağlantı{
+
+
+transition:all 0.2s linear;
+
+}
+
+.bağlantı:hover{
+    
+    border: 3px double gold;
+   border-radius: 50%;
+
+
+}
+
+
+.link-in-footer a{
+
+    text-decoration: none;
+   color: white;
+  transition: all 0.2s linear;
+}
+
+
+.link-in-footer a:hover{
+
+    text-decoration:underline;
+  color: red;
+
+}
+
+.kampanya-menu{
+
+  width: 40vw;
+min-width: 500px;
+max-height: 500px;
+
+}
+
+
+ .dropdown:hover >  .dropdown-menu{
+
+    display: block;
+    margin-top: 0;
+
+}
+
+
+.carousel-dropdown img{
+
+
+  min-height: 180px;
+  object-fit: contain;
+
+
+}
+
+     .accordion-button::after {
+            display: none;
+        }
+        .accordion-button {
+            width: 100%;
+            color: #343a40;
+            box-shadow: none !important; /* Gölgeyi sıfırla */
+            border: none !important;
+            background-color: transparent !important;
+        }
+        .accordion-button:hover {
+            background-color: #e9ecef !important;
+        }
+
+        @media (max-width:800px){
+            .hide-on-mobile {
+                display: none;
+            }
+        }
+
+
+
+
+ .dropdown:hover >  .dropdown-menu{
+
+    display: block;
+    margin-top: 0;
+
+}
+
+
+
+.ürünlerimiz-mega-menu{
+
+border: none;
+  width: 1000px;
+  left: 50%;
+  transform: translateX(-50%);
+ padding: 10px;
+ max-height: 500px;
+min-height: 400px;
+
+}
+
+.robo-card{
+
+width: 150px;
+height: 150px;
+cursor:pointer;
+transition: all 0.3s linear;
+}
+
+
+.robo-card:hover{
+
+box-shadow: -3px 3px 2px gray;
+transform: translateY(-3px);
+border: 2px solid lightgray;
+
+
+}
+
+.ürünlerimiz-telefon-mega-menu{
+
+width: 1000px;
+border: none;
+background-color: white;
+
+
+
+}
+
+
+
+
+
+@media (max-width:600px)
+
+{
+
+.ürünlerimiz-mega-menu{
+
+transform: none;
+left: none;
+width: fit-content;
+
+
+}
+
+
+
+}
+
+@media (min-width:1000px){
+
+.nav-link{
+
+  font-weight: bold;
+  color: #343a40;
+  font-size: 20px;
+
+}
+
+
+.şirket-logosu{
+
+position: relative;
+left: 8rem;
+
+}
+
+
+}
+
+
+.süpürge-türleri{
+  border: none;
+  padding: 20px;
+}
+
+.süpürge-türleri.active{
+
+  background-color: #343a40;
+ border: none;
+
+}
+
+.ürünlerimiz-mega-menu{
+
+
+  border: 2px solid gray;
+}
+
+.nav-dropdown-link::after{
+
+display: none;
+
+}
+
+.tab-pane{
+
+min-height: 490px;
+
+
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    
+
+
+    <div class="container-fluid " style="max-width:1280px;background-color: whitesmoke;">
+
+<header>  
+
+
+  <section>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+  
+    
+    <a class="navbar-brand şirket-logosu " href="#"  style="font-size: 30px;font-weight: 500; text-shadow: -3px 3px 3px gray;">
+    <svg width="51" height="40"  viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.446 0L22.7801 8.82887C23.3936 9.35302 23.7473 10.1222 23.7473 10.9323V17.5862L13.4131 8.75734C12.7996 8.23319 12.446 7.464 12.446 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M12.446 40L22.7801 31.1711C23.3936 30.647 23.7473 29.8778 23.7473 29.0677V22.4138L13.4131 31.2427C12.7996 31.7668 12.446 32.536 12.446 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M0.117188 9.31034L10.3108 17.9705C10.805 18.3904 11.4308 18.6207 12.0775 18.6207H20.2982L10.1297 9.96253C9.63514 9.54141 9.00837 9.31034 8.36065 9.31034H0.117188Z" fill="#7B19D8"></path>
+<path d="M0.117188 30.6897L10.2481 22.0345C10.7432 21.6115 11.3713 21.3793 12.0206 21.3793H20.3227L10.1291 30.0394C9.63487 30.4593 9.00904 30.6897 8.36236 30.6897H0.117188Z" fill="#7B19D8"></path>
+<path d="M37.7884 0L27.4542 8.82887C26.8407 9.35302 26.4871 10.1222 26.4871 10.9323V17.5862L36.8212 8.75734C37.4347 8.23319 37.7884 7.464 37.7884 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M37.7884 40L27.4542 31.1711C26.8407 30.647 26.4871 29.8778 26.4871 29.0677V22.4138L36.8212 31.2427C37.4347 31.7668 37.7884 32.536 37.7884 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M50.1172 9.31034L39.9236 17.9705C39.4294 18.3904 38.8035 18.6207 38.1569 18.6207H29.9361L40.1047 9.96253C40.5992 9.54141 41.226 9.31034 41.8737 9.31034H50.1172Z" fill="#7B19D8"></path>
+<path d="M50.1172 30.6897L39.9863 22.0345C39.4912 21.6115 38.863 21.3793 38.2137 21.3793H29.9117L40.1052 30.0394C40.5995 30.4593 41.2253 30.6897 41.872 30.6897H50.1172Z" fill="#7B19D8"></path>
+</svg> ŞirketAdı
+    </a>
+
+ 
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilMenu" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="navbar-nav mx-auto hide-on-mobile">
+       
+      
+      
+      
+
+ <li class="nav-item dropdown hide-on-mobile px-3">
+          <a class="nav-link nav-dropdown-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Ürünlerimiz
+          </a>
+          <div class="dropdown-menu  ürünlerimiz-mega-menu " aria-labelledby="navbarDropdown">
+            
+          
+            
+<div class="row">
+  <div class="col-5">
+    <div class="list-group  list-süpürge-türleri " id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action süpürge-türleri active" id="list-robot-list" data-bs-toggle="list" href="#list-robot" role="tab" aria-controls="list-robot">Robot Süpürgeler</a>
+     
+      <a class="list-group-item list-group-item-action süpürge-türleri" id="list-tek-list" data-bs-toggle="list" href="#list-tek" role="tab" aria-controls="list-tek">Tek Elli süpürgeler</a>
+
+      <a class="list-group-item list-group-item-action süpürge-türleri" id="list-nostaljik-list" data-bs-toggle="list" href="#list-nostaljik" role="tab" aria-controls="list-nostaljik">Nostaljik Süpürgeler</a>
+      
+   
+    </div>
+  </div>
+
+
+  <div class="col-7">
+    <div class="tab-content  " id="nav-tabContent" >
+      <div class="tab-pane fade show active " id="list-robot" role="tabpanel" aria-labelledby="list-robot-list">
+        
+        <div class="container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-3 gap-2 cont " style="background-color: white;">
+           
+                        <div class="card robo-card" >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+   <div class="card robo-card "   >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+   <div class="card robo-card"  >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+
+   <div class="card robo-card"  >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+   <div class="card  robo-card" >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+   <div class="card  robo-card" >
+  <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+  <h5 class="text-center pt-2" >Süpürge İsmi</h5>
+  <div class="card-body">
+    
+    
+  </div>
+</div>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="tab-pane fade d-flex justify-content-evenly gap-2 lex-wrap" id="list-tek" role="tabpanel" aria-labelledby="list-tek-list">
+        
+ <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+
+                       <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+                       <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+
+                       <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+                       <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+
+                       <div class="card robo-card" style="width: 120px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+
+
+           
+
+
+                      
+
+      </div>
+
+
+
+      <div class="tab-pane fade " id="list-nostaljik" role="tabpanel" aria-labelledby="list-nostaljik-list">
+        
+
+
+      
+
+
+
+        
+      </div>
+     
+
+    </div>
+  </div>
+</div>
+
+
+
+
+          </div>
+        </li>
+
+
+
+
+
+
+
+
+        <a class="nav-link px-3" href="#">Kargo ve Siparişler</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kampanyalar ve İndirimler</a>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobilMenu" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Menü</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div class="navbar-nav">
+      <a class="nav-link active" aria-current="page" style="color: black; text-decoration: none;" href="#">AnaSayfa </a><hr>
+
+      <!-- Dış Akordiyon Başlangıcı -->
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Ürünlerimiz
+            </button>
+          </h2>
+
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+
+              <!-- İç Akordiyon Başlangıcı -->
+              <div class="accordion accordion-flush" id="accordionFlushInner">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingInnerOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInnerOne" aria-expanded="false" aria-controls="flush-collapseInnerOne">
+                     Robot Süpürgeler
+                    </button>
+                  </h2>
+
+                  <div id="flush-collapseInnerOne" class="accordion-collapse collapse" aria-labelledby="flush-headingInnerOne" data-bs-parent="#accordionFlushInner">
+                    <div class="accordion-body d-flex justify-content-evenly flex-wrap gap-1" style="padding: 15px;">
+                      <!-- Robot Süpürgeler Kartları -->
+                      <div class="card robo-card" style="width: 100px;">
+                        <img src="https://www.sunny.com.tr/wp-content/uploads/sunny-hero-power-plus-zengin-icerik-10.jpg" class="card-img-top" alt="...">
+                        <h5 class="text-center pt-2">Süpürge İsmi</h5>
+                      </div>
+                      <!-- Diğer kartlar burada... -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tek Elliler Akordiyonu -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingInnerTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseInnerTwo" aria-expanded="false" aria-controls="flush-collapseInnerTwo">
+                     Tek Elliler
+                    </button>
+                  </h2>
+                  <div id="flush-collapseInnerTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingInnerTwo" data-bs-parent="#accordionFlushInner">
+                    <div class="accordion-body d-flex justify-content-evenly flex-wrap gap-2">
+                      <!-- Tek Elliler Kartları -->
+                      <div class="card" style="width: 100px;">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc6601423-1/L/sinbo-pratik-supurge-8602-kc6601423-1-330ec177011642e8972d942d6e0f8e6b.jpg" class="card-img-top img-fluid" alt="...">
+                        <h6 class="card-title">Süpürge İsmi</h6>
+                      </div>
+                      <!-- Diğer kartlar burada... -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Nostaljik Süpürgeler Akordiyonu -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-nostaljikSüpürgeler">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nostaljik" aria-expanded="false" aria-controls="flush-nostaljik">
+                      Nostaljik Süpürgeler
+                    </button>
+                  </h2>
+                  <div id="flush-nostaljik" class="accordion-collapse collapse" aria-labelledby="flush-nostaljikSüpürgeler" data-bs-parent="#accordionFlushInner">
+                    <div class="accordion-body">
+                      <!-- Nostaljik Süpürgeler İçin İçerik -->
+                     
+                   
+                      <div class="card" style="width: 100px;">
+  <img  src="https://www.fiyati.com.tr/resimler/supurge/w-fischer-wf-155-fiyati-ozellikleri-yorumlari-kullananlar.webp" class="card-img-top img-fluid" alt="...">
+  <div class="card-body">
+    <h6 class="card-title">Süpürge ismi</h6>
+  
+
+  </div>
+</div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- İç Akordiyon Bitişi -->
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- Dış Akordiyon Bitişi -->
+
+      <!-- Akordiyon Dışı Bölümler -->
+      <a href="" class="nav-link nav-item" style="color: black;">Kargo ve Siparişler</a>
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Kampanyalar ve İndirimler</a>   
+
+ 
+
+      <a class="nav-link" aria-current="page" style="color: black; text-decoration: none;" href="#">Kılavuz </a><hr>
+         <div class="container-fluid d-flex justify-content-start align-items-center gap-4 mb-3"><a href="" class="nav-link" style="color: black;">Yardım ve Destek</a> <a href="" class="nav-link" style="color: black;">İletişim</a> </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Ürün Arayın" aria-label="Search">
+        <button class="btn text-light bg-primary btn-outline-warning" type="submit">Ara</button>
+      </form>
+   
+     
+
+    <div style="height: 15px;"></div>
+      <img class="img-fluid" width="150" src="https://1.bp.blogspot.com/-kEw8s7TQhD0/Xzf2DwPFEKI/AAAAAAAAB8k/Zx4U-W9TLxAdJMtO8nf-98KyLgP_fl0cQCNcBGAsYHQ/s0/sade-turk-bayraklari-14.jpg" >
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center " style="min-height: 100px;">
+                <h1 style="text-shadow: -3px 2px 3px black;color: gray; "  class="Ana-başlık">Robot Süpürge</h1>
+            
+            </div>
+
+
+        </div>
+
+</header>
+
+
+
+     <main>   
+
+            
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+
+  <div class="carousel-inner  " style="max-width: 3500px;">
+
+    <div class="carousel-item active " data-bs-interval="5000">
+      <img src="https://www.robotsupurgeservis.com.tr/wp-content/uploads/2023/12/robotsupurgeservis.com_.tr-21.jpg" class="d-block w-100"   alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Her eve lazım</h5>
+        <p>Çok beğenilen yeni teknoloji!</p>
+      </div>
+    </div>
+    
+    <div class="carousel-item " data-bs-interval="5000">
+      <img src="https://mansetcomtr.teimg.com/manset-com-tr/uploads/2024/12/2025in-en-verimli-robot-supurgeleri.jpg"  class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Ekonomik</h5>
+        <p>Her bütçeye uygun ve çoklu taksit imkanlarıyla!</p>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://i0.wp.com/mediatrend.mediamarkt.com.tr/wp-content/uploads/2021/03/robot-supurge.jpeg?fit=1200%2C675&amp;ssl=1" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Koşulsuz Geri iade</h5>
+        <p>Ürünümüzden memnun kalmadığınız takdirde koşulsuz geri iade!</p>
+      </div>
+    </div>
+
+   
+
+    
+    <div class="carousel-item " data-bs-interval="5000">
+   <img   src="https://img-colinstr.mncdn.com/Assets/Branch/Thumbs/136552.jpeg"  class="d-block w-100 kampanya-resmi" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="text-dark " style="font-size: 50px;position: relative; bottom: 27rem;">01-30 TEMMUZ İNDİRİMLERİ</h5>
+        <p class="text-dark pt-3" style="font-size: 20px;">Yazın Temizlik Yapmayın.Tatilinizin tadını çıkartın.</p>
+      </div>
+    </div>
+    
+
+    
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+
+
+
+
+     <div class="container-fluid" >
+        <h2 class="mb-4 text-center pt-3 text-secondary" style="font-family: Arial, Helvetica, sans-serif;" >Evinizin Küçük Yardımcısı</h2>
+    </div>
+   
+    <div class="container-fluid" style="background-color: #f0f0f0;">
+    
+        <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-12 d-flex justify-content-center">
+                <img class="img-fluid rounded" src="https://www.halistores.com/Data/EditorFiles/icerik/robot-supurge-haliya-cikiyor-mu.jpg" alt="Halıdaki robot süpürge">
+            </div>
+            <div class="col-lg-6 col-12">
+                <h2 class="text-center mt-3 mt-lg-0">Her Eve Gerekli Teknoloji</h2>
+                <p class="text-center">Teknoloji çağında kendinizi yormanıza gerek yok. Sizin için halledecek birisi var!</p>
+                <ul>
+                    <li>Şarj edin</li>
+                    <li>Çalıştırın</li>
+                    <li>Bırakın Temizlesin</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container"><hr></div>
+        
+      
+        <div class="row align-items-center py-4">
+         
+            <div class="col-lg-6 col-12 order-2 order-lg-1">
+                <h2 class="text-center mt-3 mt-lg-0">Objeleri Algılama Özelliği</h2>
+                <p class="text-center">Etrafında kendisine engel olabilecek objeleri algılayabilir</p>
+                <ul>
+                    <li>Kumanda</li>
+                    <li>Oyuncak</li>
+                    <li>Bilye</li>
+                    <li>Evcil Hayvan</li>
+                </ul>
+                <p>-ve daha birçoğunu sensörleriyle algılama özelliği.</p>
+            </div>
+         
+            
+            <div class="col-lg-6 col-12 order-1 order-lg-2 d-flex justify-content-center">
+                <img class="img-fluid rounded" src="https://www.log.com.tr/wp-content/uploads/2019/04/samsung-powerbot-fullview-sensor-2-1-1000x450.jpg" alt="Sensörlü robot süpürge">
+            </div>
+        </div>
+
+        <div class="container"><hr></div>
+
+     
+        <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-12 d-flex justify-content-center">
+                <img class="img-fluid rounded" src="https://9to5toys.com/wp-content/uploads/sites/5/2020/04/eufy-RoboVac-25C.jpg" alt="Yüksek emiş güçlü süpürge">
+            </div>
+            <div class="col-lg-6 col-12 text-center">
+                <h2 class="mt-3 mt-lg-0">Yüksek Emiş Gücüyle Her Şeyi Toplar</h2>
+                <p>Yemek artıkları ve evinizin tozlanması artık sorun değil.</p>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+       <div class="show-on-mobile" style="height: 25px;"></div>
+     <h2 class="text-center  " style="color:darkslategray; font-weight: 500;">ÇEŞİTLERİMİZ</h2>
+    <div class="container-fluid " style="background-color: #fff; margin: 0;" >   
+    
+     
+
+<div class="tab-content çeşit-tab-content mx-auto" id="pills-tabContent">
+
+
+  <div class="tab-pane fade show active" id="pills-ilkÇeşit" role="tabpanel" aria-labelledby="pills-ilkÇeşit-tab">
+
+<div class="row">
+    <div class="col-lg-6 col-sm-12">
+<img class="img-fluid" src="https://cdn.cimri.io/pictures/article/original/25/25522.jpg" alt="Picture background" aria-hidden="true">
+</div>
+    <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center"> 
+         <h2>Başlık</h2>
+         <p>Ürün açıklaması</p>
+        <ul>
+        <li>öğe1</li>
+        <li>öğe2</li>
+        <li>öğe3</li>
+        <li>öğe4</li>
+    </ul>
+     <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >2299.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+</div>
+</div>
+
+</div>
+
+
+  <div class="tab-pane fade" id="pills-ikinciÇeşit" role="tabpanel" aria-labelledby="pills-İkinciÇeşit-tab">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12"><img class="MMImage-Origin" src="https://static.1k.by/images/productsimages/ip/big/pp1/5/4958130/if80f4fdd5.jpg" alt="Picture background" aria-hidden="true">
+</div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center"> <h2>Çeşit tarzı</h2> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, voluptatum tenetur dolor quibusdam enim magni adipisci assumenda repellendus tempore impedit, soluta quisquam harum illum eaque molestiae magnam recusandae ab ducimus.</p>
+        
+         <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >2899.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+        
+        </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="tab-pane fade" id="pills-üçüncüÇeşit" role="tabpanel" aria-labelledby="pills-üçüncüÇeşit-tab">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 "><img class="MMImage-Origin" src="https://www.axen.com.tr/wp-content/uploads/2022/06/HERO-POWER-PLUS.jpg" alt="Picture background" aria-hidden="true"></div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center">  <ul>
+            <li>öğe1</li>
+            <li>öğe2</li>
+            <li>öğe3</li>
+            <li>öğe4</li>
+        </ul>
+     <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >1999.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+    
+    </div>
+    </div>
+
+
+  </div>
+
+
+   <div class="tab-pane fade" id="pills-dördüncüÇeşit" role="tabpanel" aria-labelledby="pills-dördüncüÇeşit-tab">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12"><img class="MMImage-Origin" src="https://www.axen.com.tr/wp-content/uploads/2022/06/HERO-POWER-PLUS.jpg" alt="Picture background" aria-hidden="true"></div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center"> <h2>Ürün açıklaması</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta at libero ex earum odit maxime deleniti. Incidunt tempora voluptatem quaerat, suscipit omnis, dolore temporibus eveniet in ad quo, hic odit!</p>
+            <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >1299.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+
+
+         </div>
+    </div>
+
+
+   </div>
+
+
+   <div class="tab-pane fade" id="pills-beşinciÇeşit" role="tabpanel" aria-labelledby="pills-beşinciÇeşit-tab">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12"><img class="MMImage-Origin" src="https://i.pinimg.com/originals/b6/5a/35/b65a3536eadd7579f00ac08aaac288be.jpg" alt="Picture background" aria-hidden="true"></div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center"><h2>Başlık</h2>
+        <p style="line-height: 17px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium eius, laborum ex, doloribus reiciendis voluptates magnam quisquam ullam quibusdam quae, labore necessitatibus nulla voluptatem odio? In maiores incidunt odio nobis.</p>
+    
+     <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >1299.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+    
+    </div>
+    </div>
+
+   </div>
+
+
+   <div class="tab-pane fade" id="pills-altıncıÇeşit" role="tabpanel" aria-labelledby="pills-altıncıÇeşit-tab">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12"><img class="MMImage-Origin" src="https://www.mutfakdunyasi.com/philips-homerun-aqua-cop-istasyonlu-akilli-robot-supurge-xu311002-elektrikli-supurge-philips-23579-77-O.jpg"></div>
+        <div class="col-lg-6 col-sm-12 d-flex flex-column  justify-content-center align-items-center"> <ul>
+            <li>öğe1</li>
+            <li>öğe2</li>
+        </ul>
+         <p style="line-height: 16px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae accusantium quas sint amet rem excepturi officia! Consequatur, aperiam et, voluptatem explicabo fugit, sint itaque nulla magnam iste molestias voluptates numquam.</p>
+      
+         <div class="show-above-lg"> <p style="font-weight: bold; font-size: 20px;" >1299.00TL</p><button class="btn bg-primary text-light btn-outline-warning">Satın Al</button></div>   
+
+    </div>
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div class="show-on-mobile" style="height: 50px;"></div>
+<div class="nav nav-pills mb-3 d-flex justify-content-evenly " id="pills-tab" role="tablist">
+
+    <button class=" active çeşit-buton px-2 " id="pills-ilkÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-ilkÇeşit" type="button" role="tab" aria-controls="pills-ilkÇeşit" aria-selected="true"></button>
+
+ 
+    <button class=" çeşit-buton px-2" id="pills-ikinciÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-ikinciÇeşit" type="button" role="tab" aria-controls="pills-ikinciÇeşit" aria-selected="false"></button>
+ 
+  
+    <button class=" çeşit-buton px-2" id="pills-üçüncüÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-üçüncüÇeşit" type="button" role="tab" aria-controls="pills-üçüncüÇeşit" aria-selected="false"></button>
+
+    
+    <button class="çeşit-buton px-2" id="pills-dördüncüÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-dördüncüÇeşit" type="button" role="tab" aria-controls="pills-dördüncüÇeşit" aria-selected="false"></button>
+
+    
+    <button class=" çeşit-buton px-2" id="pills-beşinciÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-beşinciÇeşit" type="button" role="tab" aria-controls="pills-beşinciÇeşit" aria-selected="false"></button>
+
+    
+    <button class=" çeşit-buton px-2" id="pills-altıncıÇeşit-tab" data-bs-toggle="pill" data-bs-target="#pills-altıncıÇeşit" type="button" role="tab" aria-controls="pills-altıncıÇeşit" aria-selected="false"></button>
+  
+</div>
+
+
+
+
+<div style="height: 15px;"></div>
+    
+    </div>
+ 
+
+
+            
+
+
+
+
+
+
+
+
+
+
+<section>   
+
+
+            
+            
+ <div class="container-fluid" style="background-color: #fff;">
+
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 mx-auto  m-2">
+   <img src="https://previews.123rf.com/images/soleg/soleg1501/soleg150100218/35914327-white-truck-on-road-cargo-transportation.jpg" 
+   class="img-fluid" ></div>
+
+        <div class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center  "> <h2>Aynı Gün Kargo İmkanı</h2></div>
+      
+      </div>
+          
+
+      <div style="height: 25px;" class="show-on-mobile"></div>
+       
+
+              <div class="row">
+        <div class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center  order-1 order-lg-0  p-2"><h2>Arıza ve Bozulma </h2>
+          <p>Her alette 12 Ay Garanti İmkanı.Teknik Servis Bir tıkla Ulaşılabilir</p>
+        <p>14 Gün içinde tamir edilemezse Paranızın Bir Kısmı İade</p>  </div>
+        <div class="col-lg-6 col-sm-12  order-0 order-lg-1 "> <img src="https://www.cozumholding.com.tr/upload/hizmetler/teknik_servis.jpg" class="img-fluid" alt=""></div>
+    
+      </div>
+          <div style="height: 10px;"></div>
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+<div class="container " style="background:linear-gradient(to right,silver,white);color: purple; ">
+    <h2  class="text-center"  style="font: normal  600 40px/30px; ">Temizlik Zaman Kaybı Olmasın!</h2> </div>
+<div style="height: 16px;" > </div>
+
+
+
+<section  >
+    <!--Müşteri yorumları-->
+    
+    <aside  class="container-fluid hide-on-mobile "  style="background-color: #fff;"  >
+
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col p-2 ">
+    <div class="card yorum " style="background-color: antiquewhite;">
+  <h6>@Kullanıcı Adı</h6>
+              <h5 class="card-title">10/9</h5>
+      <div class="card-body">
+
+        <p class="card-text">Örnek Yorum</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card p-2 yorum" style="background-color: antiquewhite;">
+  <h6>@Kullanıcı Adı</h6>
+        <h5 class="card-title">10/10</h5>
+      <div class="card-body">
+
+        <p class="card-text">Örnek Yorum.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card p-2 yorum" style="background-color: antiquewhite;">
+  <h6>@Kullanıcı Adı</h6>
+           <h5 class="card-title">10/10</h5>
+      <div class="card-body">
+        <p class="card-text">Örnek Yorum.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card p-2 yorum " style="background-color: antiquewhite;">
+       <h6>@Kullanıcı Adı</h6>
+       <h5 class="card-title">10/10</h5>
+      <div class="card-body">
+        <p class="card-text">Örnek Yorum.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="height: 10px;"></div>
+
+
+
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+    <aside class="show-on-mobile  mobile-customer-container">
+        
+    
+
+
+<div class="tab-content Müşteri-Tab" id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-Müşteri1" role="tabpanel" aria-labelledby="pills-Müşteri1-tab">...</div>
+  <div class="tab-pane fade" id="pills-Müşteri2" role="tabpanel" aria-labelledby="pills-Müşteri2">...</div>
+  <div class="tab-pane fade" id="pills-Müşteri3" role="tabpanel" aria-labelledby="pills-Müşteri3-tab">...</div>
+</div>
+
+
+<div class="Müşteri-buton d-flex justify-content-center gap-2 ">  
+
+<div class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+  
+    <button class=" nav-custom-link active" id="pills-Müşteri1-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri1" type="button" role="tab" aria-controls="pills-Müşteri1" aria-selected="true"></button>
+  
+
+    <button class=" nav-custom-link" id="pills-Müşteri2-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri2" type="button" role="tab" aria-controls="pills-Müşteri2" aria-selected="false"></button>
+  
+
+
+    <button class=" nav-custom-link" id="pills-Müşteri3-tab" data-bs-toggle="pill" data-bs-target="#pills-Müşteri3" type="button" role="tab" aria-controls="pills-Müşteri3" aria-selected="false"></button>
+  
+</div>
+
+</div>
+
+
+    </aside>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<aside>
+  <section class="container-fluid" style="background-color: white;" >
+
+
+<div class="row">
+   <div style="height: 20px;"></div>
+ 
+   <div class="col-lg-7 col-sm-12  ">
+    <h2 class="text-center">Neden biz?</h2>
+  
+    
+<div class="tab-content years-tab-content mx-auto m-2 " id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-oldYears" role="tabpanel" aria-labelledby="pills-oldYears-tab">
+    <img class="img-fluid" src="https://www.fiyati.com.tr/resimler/supurge/rowenta-rb-155-wet-dry-fiyati-ozellikleri-yorumlari-kullananlar.webp" >
+  
+  </div>
+
+  <div class="tab-pane fade" id="pills-midYears" role="tabpanel" aria-labelledby="pills-midYears-tab">
+    
+    <img class="img-fluid" src="https://images.kabum.com.br/produtos/fotos/sync_mirakl/135916/Aspirador-De-P-Vertical-WAP-Silent-Speed-2-Em-1-1000w-1l-220V-Preto-E-Vermelho-Fw005872_1674673723_gg.jpg" >
+  
+  </div>
+  
+  <div class="tab-pane fade" id="pills-newYears" role="tabpanel" aria-labelledby="pills-newYears-tab">
+    
+<img class="img-fluid" src="https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-an-image-of-a-robot-in-the-form-of-a-vacuum-image_2934877.jpg"  >
+
+  </div>
+</div>
+
+
+<div class="nav nav-pills mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
+  
+    <button class="years-button active" id="pills-oldYears-tab" data-bs-toggle="pill" data-bs-target="#pills-oldYears" type="button" role="tab" aria-controls="pills-oldYears" aria-selected="true">1990-2000</button>
+
+
+    <button class="years-button " id="pills-midYears-tab" data-bs-toggle="pill" data-bs-target="#pills-midYears" type="button" role="tab" aria-controls="pills-midYears" aria-selected="false">2000-2020</button>
+  
+    
+    <button class="years-button" id="pills-newYears-tab" data-bs-toggle="pill" data-bs-target="#pills-newYears" type="button" role="tab" aria-controls="pills-newYears" aria-selected="false">2020+</button>
+  
+</div>
+
+
+
+    
+
+   <h2 class="text-start" style="color: gray; font-weight: bold;">35 Yıllık Tecrübe</h2>
+    <p style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:red;">35 yılın verdiği bilgi tecrübe ile  en iyisini yapıyoruz</p>
+  
+
+
+
+
+
+
+
+  </div>
+  
+  <div class="col-lg-5 col-sm-12">
+
+    <a href="   ">
+    <img class="img-fluid ütü-resmi " src="https://www.sunny.com.tr/wp-content/uploads/hero-power-robot-supurge-6.jpg" alt="Picture background" style="background-color: none;" aria-hidden="true">
+  
+     </a>
+
+  </div>
+
+ <div style="height: 40px;"></div>
+
+</div>
+
+
+
+
+
+
+  </section>
+</aside>
+
+
+
+
+
+
+<!--Firmamız hakkında-->
+
+<section>
+    <aside class="container-fluid " style="background-color:gray;"  >
+                                 
+     <h2 class="text-center" style=" font-weight: bold; text-shadow: 3px 3px 1px white;">Son Teknolojiyle Geleceğe</h2>
+        <div class="row">
+
+              <div class="col-lg-6 col-sm-6 d-flex justify-content-center"><img class="img-fluid gelecek-sol" src="https://media.istockphoto.com/id/1654943682/tr/foto%C4%9Fraf/advanced-high-precision-robot-arms-on-fully-automated-pcb-assembly-line-inside-modern.jpg?s=170667a&amp;w=0&amp;k=20&amp;c=wtcGDim6L3xYFVaIvGE1_7IcBpb_xjOXTvGMSPGIsUE=" alt="Picture background" aria-hidden="true"></div> 
+
+            <div class="col-lg-6 col-sm-6"><img class="img-fluid gelecek-sağ" src="https://static.ticimax.cloud/55525/Uploads/Blog/Robot-Supurge-Nasil-Calisir-ce90.jpeg" alt="Picture background" aria-hidden="true">
+            </div>  
+            
+        
+
+
+        </div>
+
+        <div style="height: 20px;"></div>
+       
+
+    
+</section>
+
+
+
+
+
+
+
+
+ </main>   
+
+
+
+
+
+<section style="background-color: #fff;">
+  <div style="height: 30px;"></div>
+<div class="row">
+  <div class="col-lg-6 col-sm-12 mx-auto text-center">
+
+  <h2 class="">Siz Evde Yokken Temizlesin</h2>
+  <p>Uygulamamızı indirerek Dışarıdayken bile Süpürgenize Komut verebilirsiniz.</p>
+<img class="mx-auto" src="https://img.freepik.com/premium-vector/vector-cartoon-hand-holding-touching-phone-mockup-template-cartoon-hands-with-smartphone-scrolling-searching-something-isolated-white-background_221648-211.jpg?semt=ais_hybrid" alt="Picture background" aria-hidden="true">
+
+
+  </div>
+  
+  
+  
+  <div class="col-lg-6 col-sm-12 mx-auto">
+    <div class="show-on-mobile" style="height: 20px;"></div>
+      <h2  class="text-center" >'Uygulama İsmi' 'ni Hemen İndirin!'</h2>
+    <a href="">
+<img alt="Logo of Apple App Store" title="Logo of Apple App Store" class=" mx-4" src="https://s1.kaercher-media.com/media/image/selection/134924/d3/app-store.webp" width="320px"></a>
+     <p  class="text-center">  App Store'dan <a href="" style="text-decoration: none;">İndirin</a></p>
+
+     <a href="">
+<img alt="Logo of Google Play Store" title="Logo of Google Play Store" class=" mx-4" src="https://s1.kaercher-media.com/media/image/selection/134928/d3/google-play.webp" width="320px" ></a>
+        <p  class="text-center">  App Store'dan <a href="" style="text-decoration: none;">İndirin</a></p>
+
+  
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+    <aside>   
+
+
+ <div class="container border-top border-bottom border-secondary" style="background-color:#fff ;"> <h2>Sıkça Sorulan Sorular</h2>   </div>   
+
+
+<div class="accordion" id="accordionExample">
+  
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Robot Süpürgemi Nasıl kullanırım?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Robot Süpürgemin Temizliğini Nasıl yaparım?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      Arıza Kaydı Nasıl Oluştururum?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+        Robot Süpürgenin Kamerası ve İşleyiş Tarzı.
+      </button>
+    </h2>
+    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
+
+
+</aside>
+
+<div style="height: 30px;"></div>
+
+
+    <h2 class="text-center">Ödeme Seçeneklerimiz</h2>
+
+
+
+<div class="container d-flex justify-content-center">         
+   <img src="https://omnipaystore.com/wp-content/uploads/2022/05/Visa.png" width="60" height="auto">
+  <img class="MMImage-Origin" src="https://www.pngarts.com/files/3/Mastercard-Logo-PNG-Transparent-Image.png"  width="200px" >
+
+</div>
+
+
+<div class="container-fluid text-center">
+    <h2>Anlaşmalı olduğumuz Bankalar ve Taksit seçenekleri</h2>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Banka Adı</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">X</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">Y</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">Z</th>
+      <td colspan="2">Larry the Bird</td>
+
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="container d-none d-lg-block">  
+
+   <div class="card bg-dark text-white">
+   
+  <img src="https://mansetcomtr.teimg.com/crop/1280x720/manset-com-tr/uploads/2024/12/2025in-en-verimli-robot-supurgeleri.jpg" class="card-img img-fluid şimdi-resim " alt="...">
+  <div class="card-img-overlay">
+
+    <h5 class="card-title" style="font-size: 60px; color: white;" >Kaçırma</h5>
+    <p class="card-text kaçırma-container " style="font-size: 50px;">Sende bir tane istiyorsan Tıkla!</p>
+    
+  
+
+  </div>
+</div>
+
+
+  <div class="d-flex justify-content-evenly şimdiAl ">   <a href="" style="text-decoration: none;font-weight: bold; font-size: 60px;font-family: Arial, Helvetica, sans-serif; bg-danger"  >ŞİMDİ AL</a> <p style="font-size: 60px;">1299.00 TL</p> 
+  
+  </div>
+
+</div>
+
+
+
+
+
+
+<div class="container-fluid d-sm-none ">
+
+
+  <img src="https://mansetcomtr.teimg.com/crop/1280x720/manset-com-tr/uploads/2024/12/2025in-en-verimli-robot-supurgeleri.jpg " class="img-fluid border border-secondary" alt="">
+
+  <div class="text-center pt-3"> 
+   <p style="display: inline; font-size: 20px; font-weight: bold;" class="p-2" >1299.00 TL</p>    <button class="btn bg-primary text-light btn-outline-succes">Satın Al</button>  </div>
+</div>
+
+<div class="d-sm-none" style="height: 30px;"> </div>
+
+
+
+
+
+
+
+
+
+
+ <footer>
+        <div class="container-fluid " style="background-color: #000;">
+
+
+            <div class="row text-light">
+
+                <div class="col-lg-3 col-sm-6 order-sm-0">
+                 <h2 class="text-center">İletişim <hr></h2>
+                 <p>Tüm soru ve şikayetleriniz için bizi arayabilir veya mail gönderebilirsiniz.</p>
+                       
+                 <h2>Şubelerimiz</h2>
+                 <ul>
+                    <li>Ümraniye Şubesi</li>
+                    <ul>
+                         <p style="color: gold;">Adres// [İl adı] [İlçe adı]  [Mahalle Adı] [Sokak adı] [Bina No] </p>
+                        <li>Mesai Saatleri: Pazartesi – Cumartesi : 09:00 – 18:00</li>
+                    </ul>
+                    <li>Kartal Şubesi</li>
+                    <ul>
+                          <p style="color: gold;">Adres// [İl adı] [İlçe adı]  [Mahalle Adı] [Sokak adı] [Bina No] </p>
+                        <li>Mesai Saatleri: Pazartesi - Cumartesi : 10:00 - 19:00</li>
+                    </ul>
+                 </ul>
+                  
+                 <h2>Telefon</h2>
+                   
+                  <p>Ümraniye Şubesi  //  0535 xxx xxxx</p>
+                        <p>Kartal Şubesi    // 0532 xxx xxxx  </p>
+
+
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6 text-light order-sm-1">
+                    <h2 class="text-center">Bilgilendirme<hr></h2>
+                  
+
+                     <ul  class=" link-in-footer">
+                        <li>     <a href="">Kargom Nerede?</a></li>
+                        <li>    <a href="">İade ve Değişim</a></li>
+                        <li>       <a href="">Hakkımızda</a></li>
+                        <li>     <a href="">İade ve Değişim hakları</a></li>
+                        <li>          <a href="">Teknik Servis</a></li>
+                        <li>   <a href="">Satış sözleşmesi</a></li>
+                     </ul>
+
+               
+                
+             
+                     
+              
+          
+                  
+
+
+                </div>
+
+
+
+                <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center order-sm-3 order-lg-2 ">
+                    
+                    <a href="  ">
+                    <svg width="250" height="240"   viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.446 0L22.7801 8.82887C23.3936 9.35302 23.7473 10.1222 23.7473 10.9323V17.5862L13.4131 8.75734C12.7996 8.23319 12.446 7.464 12.446 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M12.446 40L22.7801 31.1711C23.3936 30.647 23.7473 29.8778 23.7473 29.0677V22.4138L13.4131 31.2427C12.7996 31.7668 12.446 32.536 12.446 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M0.117188 9.31034L10.3108 17.9705C10.805 18.3904 11.4308 18.6207 12.0775 18.6207H20.2982L10.1297 9.96253C9.63514 9.54141 9.00837 9.31034 8.36065 9.31034H0.117188Z" fill="#7B19D8"></path>
+<path d="M0.117188 30.6897L10.2481 22.0345C10.7432 21.6115 11.3713 21.3793 12.0206 21.3793H20.3227L10.1291 30.0394C9.63487 30.4593 9.00904 30.6897 8.36236 30.6897H0.117188Z" fill="#7B19D8"></path>
+<path d="M37.7884 0L27.4542 8.82887C26.8407 9.35302 26.4871 10.1222 26.4871 10.9323V17.5862L36.8212 8.75734C37.4347 8.23319 37.7884 7.464 37.7884 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M37.7884 40L27.4542 31.1711C26.8407 30.647 26.4871 29.8778 26.4871 29.0677V22.4138L36.8212 31.2427C37.4347 31.7668 37.7884 32.536 37.7884 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M50.1172 9.31034L39.9236 17.9705C39.4294 18.3904 38.8035 18.6207 38.1569 18.6207H29.9361L40.1047 9.96253C40.5992 9.54141 41.226 9.31034 41.8737 9.31034H50.1172Z" fill="#7B19D8"></path>
+<path d="M50.1172 30.6897L39.9863 22.0345C39.4912 21.6115 38.863 21.3793 38.2137 21.3793H29.9117L40.1052 30.0394C40.5995 30.4593 41.2253 30.6897 41.872 30.6897H50.1172Z" fill="#7B19D8"></path>
+</svg>
+                    </a>
+   <h1 style="font-weight: bold; font-size: 40px; color: blue;" >'Şirket Adı'</h1>
+
+<h2>"Hayatın İçinde"</h2>
+
+</div>
+
+
+                <div class="col-lg-3 col-sm-6 text-light  order-sm-2 order-lg-3  ">
+                     <h2 class="text-center">Sosyal Medya</h2>
+               <p>En son kampanyalardan ve İndirimlerden  İlk önce siz haberdar olun!</p>
+            <p>FaceBook sayfamız // <a href="" class="m-2" ><img src="https://cdn.dsmcdn.com/web/production/footer-facebook.png" alt="Trendyol Facebook ikonu"
+                 width="50" height="50" class="bağlantı"></a> 
+                </p>
+
+                    <p>İnstagram Sayfamız // <a href="" class="m-2"><img src="https://cdn.dsmcdn.com/web/production/footer-instagram.png" alt="Trendyol Instagram ikonu" width="40" class="bağlantı"></a></p>
+                      <p>Twitter sayfamız // <a href=""><img src="https://cdn.dsmcdn.com/web/production/footer-x.png" alt="Trendyol X ikonu" width="50" class="bağlantı"></a></p>
+                      
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div style="height: 20px;"></div>
+
+<div class="row">
+    <div class="col-lg-12  text-center"> <h6 class="text-light"> Copyright © 2025 şirketAdı.com </h6> </div>
+    
+</div>
+
+
+        </div>
+    </footer>
+
+
+
+
+
+<div class="alert alert-secondary alert-dismissible fade show fixed-bottom hide-on-mobile " role="alert">
+  <strong>Yaz İndirimeri yaklaşıyor</strong> <p>01-30 Temmuz Arası indirimleri kaçırmayın!</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+
+
+ <!--Container bitişi-->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      <a href="  ">
+                    <svg width="250" height="240"   viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.446 0L22.7801 8.82887C23.3936 9.35302 23.7473 10.1222 23.7473 10.9323V17.5862L13.4131 8.75734C12.7996 8.23319 12.446 7.464 12.446 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M12.446 40L22.7801 31.1711C23.3936 30.647 23.7473 29.8778 23.7473 29.0677V22.4138L13.4131 31.2427C12.7996 31.7668 12.446 32.536 12.446 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M0.117188 9.31034L10.3108 17.9705C10.805 18.3904 11.4308 18.6207 12.0775 18.6207H20.2982L10.1297 9.96253C9.63514 9.54141 9.00837 9.31034 8.36065 9.31034H0.117188Z" fill="#7B19D8"></path>
+<path d="M0.117188 30.6897L10.2481 22.0345C10.7432 21.6115 11.3713 21.3793 12.0206 21.3793H20.3227L10.1291 30.0394C9.63487 30.4593 9.00904 30.6897 8.36236 30.6897H0.117188Z" fill="#7B19D8"></path>
+<path d="M37.7884 0L27.4542 8.82887C26.8407 9.35302 26.4871 10.1222 26.4871 10.9323V17.5862L36.8212 8.75734C37.4347 8.23319 37.7884 7.464 37.7884 6.65386V0Z" fill="#7B19D8"></path>
+<path d="M37.7884 40L27.4542 31.1711C26.8407 30.647 26.4871 29.8778 26.4871 29.0677V22.4138L36.8212 31.2427C37.4347 31.7668 37.7884 32.536 37.7884 33.3461V40Z" fill="#7B19D8"></path>
+<path d="M50.1172 9.31034L39.9236 17.9705C39.4294 18.3904 38.8035 18.6207 38.1569 18.6207H29.9361L40.1047 9.96253C40.5992 9.54141 41.226 9.31034 41.8737 9.31034H50.1172Z" fill="#7B19D8"></path>
+<path d="M50.1172 30.6897L39.9863 22.0345C39.4912 21.6115 38.863 21.3793 38.2137 21.3793H29.9117L40.1052 30.0394C40.5995 30.4593 41.2253 30.6897 41.872 30.6897H50.1172Z" fill="#7B19D8"></path>
+</svg>
+                    </a>
+
+
+
+
+    </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
